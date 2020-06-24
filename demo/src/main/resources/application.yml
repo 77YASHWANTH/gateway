@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://192.168.33.30:9004
+          predicates:
+            - Path=/**
+logging:
+  level:
+    ROOT: DEBUG
